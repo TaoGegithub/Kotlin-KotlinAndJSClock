@@ -83,7 +83,8 @@ fun drawClock() {
 }
 
 fun getNowTime() {
-    val date = Date().asDynamic()//关闭类型检查
+    //asDynamic()包装成js类型,关闭类型检查
+    val date = Date().asDynamic()
     hour = date.getHours()
     minute = date.getMinutes()
     second = date.getSeconds()
